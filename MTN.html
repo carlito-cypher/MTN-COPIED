@@ -1,0 +1,2443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - MTN Nigeria</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=MTNBrighterSans-Medium|MTNBrighterSans-Regular|MTNBrighterSans-Bold">
+    <script src="https://kit.fontawesome.com/ed5a7ca7b8.js" crossorigin="anonymous"></script>
+    <style>
+        .body{margin: 0px;width: 100%;}
+        .top{position: relative; background-color: rgb(255, 204, 0); padding: 13px;}
+        .logo{height: 35px; width: 70px; position: absolute; top: 18px;}
+        .header{list-style-type: none; padding-left: 50px;}
+        .header li{
+            display: inline;
+            padding-left: 45px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgb(52, 47, 47);
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .header li:hover{font-weight: bold; color: black; font-size: 14.3px;}
+        .search{
+            background-color: transparent;
+            background-image: url('searchpic.png');
+            background-repeat: no-repeat;
+            background-position: 13px 5px;
+            background-size: 20px;
+            display: inline;
+            border: 2px solid black;
+            border-radius: 25px;
+            padding: 7px 0px 7px 40px;
+            position: absolute;
+            left: 1000px;
+            top: 17px;
+        }
+        .feed{position: relative;}
+        .feedback{
+            background-color: black;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            margin: 0%;
+            padding: 3px 35px;
+            color: white;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 35px;
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+            position: fixed;
+            top: 260px;
+            right: -45px;
+            z-index: 99;
+        }
+        .feedback:hover{background-color: rgb(179, 172, 172);}
+        .dot{
+            height: 5px;
+            width: 5px;
+            margin: 0 2px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .newdot{text-align: center; position: relative; top: -70px;}
+        .active{background-color: rgb(90, 79, 79);}
+        .first{width: 100%; height: 500px;}
+        .staa{position: absolute; left: 80px; top: -370px; color: white;}
+        .sta1{
+            padding: 12px 10px;
+            color: black;
+            background-color: rgb(255, 204, 0);
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: MTNBrighterSans-Regular, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .spann{font-family: MTNBrighterSans-Regular, "Century Gothic", Arial, sans-serif; font-size: 24px; font-weight: 400;}
+        .spamm{font-family: MTNBrighterSans-Medium, "Century Gothic", Arial, sans-serif; font-size: 72px; font-weight: 700;}
+        .yellow1{position: relative;}
+        .yellow2{height: 250px; width: 100%; position: relative; top: -60px;}
+        .post{position: absolute; top: 90px; width: 100%; text-align: center;}
+        .personal{text-decoration: none; position: absolute; top: -60px; left: 360px;}
+        .personal i{
+            color: rgb(255, 204, 0);
+            background-color: white;
+            padding: 15px 18px;
+            font-size: 50px;
+            border-radius: 7px;
+            box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)
+        }
+        .business{text-decoration: none; position: absolute; top: -60px; left: 510px;}
+        .business i{
+            color: rgb(0, 0, 0);
+            background-color: white;
+            padding: 15px 18px;
+            font-size: 50px;
+            border-radius: 7px;
+            box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)
+        }
+        .play{text-decoration: none; position: absolute; top: -60px; left: 670px;}
+        .play i{
+            color: rgb(237, 61, 143);
+            background-color: white;
+            padding: 15px 18px;
+            font-size: 50px;
+            border-radius: 7px;
+            box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)
+        }
+        .momo{text-decoration: none; position: absolute; top: -60px; left: 830px;}
+        .momo i{
+            color: rgb(15, 105, 135);
+            background-color: white;
+            padding: 15px 16px;
+            font-size: 50px;
+            border-radius: 7px;
+            box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)
+        }
+        .personal i:hover, .business i:hover, .play i:hover, .momo i:hover{background-color: rgb(255, 255, 255); cursor: pointer;}
+        .spanner{
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            font-family: MTNBrighterSans-Regular, sans-serif;
+        }
+        .yellow3{
+            padding: 12px 13px;
+            color: black;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: MTNBrighterSans-Regular, sans-serif;
+            font-size: 14px;
+            font-weight: 550;
+            margin-top: 150px;
+        }
+        .yellow3:hover{background-color: rgb(179, 172, 172);}
+        .charmer{margin-left: 100px;}
+        .after{
+            color: rgb(255, 255, 253);
+            background-color: rgb(255, 204, 0);
+            padding: 10px 12px;
+            font-size: 30px;
+            border-radius: 7px;
+        }
+        .charm{
+            font-family: MTNBrighterSans-Medium, "Century Gothic", Arial, sans-serif;
+            margin-left: 20px;
+            font-size: 35px;
+            font-weight: bold;
+            color: rgb(33, 37, 41);
+        }
+        .charming{border: 2px solid rgb(255, 204, 0); color: black; border-radius: 50%; padding: 10px 12px; margin-left: 45px;}
+        .charming:hover{background-color: rgb(234, 217, 147); cursor: pointer;}
+        .setting{margin-left: 30px;}
+        .setting a{text-decoration: none}
+        .setting:hover{ box-shadow: 10px 5px 4px rgb(174, 171, 171);}
+        .lofted{border-radius: 20px; height: 350px; width: 320px;}
+        .rapo{position: absolute; top: -125px; left: 25px;}
+        .rapoo{position: absolute; top: -150px; left: 25px;}
+        .rapooo{position: absolute; top: -190px; left: 25px;}
+        .rapoooo{position: absolute; top: -215px; left: 25px;}
+        .rapper{
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 2px 3px;
+            color: black;
+            background-color: rgb(255, 204, 0);
+        }
+        .rapping{
+            font-family: MTNBrighterSans-Medium, "Century Gothic", Arial, sans-serif;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+        .rapped{
+            padding: 12px 10px;
+            color: black;
+            background-color: rgb(255, 204, 0);
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: MTNBrighterSans-Regular, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .lappy{
+            margin-left: 80px;
+            margin-right: 30px;
+            /* display: inline-flex; */
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .prev,
+        .next{
+            cursor: pointer;
+            position: absolute;
+            top: 152.7%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: rgb(255, 204, 0);
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            background-color: black;
+            padding: 161px 50px 161px ;
+            z-index: 20;
+            opacity: 0.5;
+        }
+        .next{
+            right: 1px;
+            border-radius: 3px 0 0 3px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .prev{
+            left: 15px;
+            border-radius: 3px 0 0 3px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .prev:hover,.next:hover{color: white}
+        .charmer1{margin-left: 100px; margin-top: 130px;}
+        .after1{
+            color: white;
+            background-color: rgb(0, 0, 0);
+            padding: 10px 12px;
+            font-size: 30px;
+            border-radius: 7px;
+        }
+        .charm1{
+            font-family: MTNBrighterSans-Medium, "Century Gothic", Arial, sans-serif;
+            margin-left: 20px;
+            font-size: 35px;
+            font-weight: bold;
+            color: rgb(33, 37, 41);
+        }
+        .charming1{
+            border: 2px solid rgb(0, 0, 0);
+            color: black;
+            border-radius: 50%;
+            padding: 10px 12px;
+            margin-left: 45px;
+        }
+        .charming1:hover{background-color: rgb(159, 159, 171); cursor: pointer;}
+        .started1{
+            background-image: url('back3.jpg');
+            background-size: 100% 650px;
+            background-repeat: no-repeat;
+            margin-top: 60px;
+            padding: 1px 0px 80px 0px;
+        }
+        .setting1{margin-left: 30px;}
+        .setting1 a{text-decoration: none;}
+        .setting1:hover{box-shadow: 10px 5px 4px rgb(174, 171, 171);}
+        .lofted1{border-radius: 20px; height: 350px; width: 320px;}
+        .rapo1{position: absolute; top: -125px; left: 25px;}
+        .rapoo1{position: absolute; top: -150px; left: 25px;}
+        .rapoooo1{position: absolute; top: -215px; left: 25px;}
+        .rapooooooo1{position: absolute; top: -300px; left: 25px;}
+        .rapper1{
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 2px 3px;
+            color: white;
+            background-color: black;
+        }
+        .rapping1{
+            font-family: MTNBrighterSans-Medium, "Century Gothic", Arial, sans-serif;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+        .rapped1{
+            padding: 12px 10px;
+            color: white;
+            background-color: black;
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: MTNBrighterSans-Regular, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .viper{
+            margin-left: 80px;
+            margin-right: 30px;
+            /* display: inline-flex; */
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .pviper,
+        .nviper{
+            cursor: pointer;
+            position: absolute;
+            top: 250%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            background-color: black;
+            padding: 161px 50px 161px ;
+            z-index: 20;
+            opacity: 0.5;
+        }
+        .nviper{
+            right: 1px;
+            border-radius: 3px 0 0 3px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .pviper{
+            left: 15px;
+            border-radius: 3px 0 0 3px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .pviper:hover,.nviper:hover {color: white;}
+        .charmer2{margin-left: 100px; margin-top: 130px;}
+        .after2{
+            color: white;
+            background-color: rgb(237, 61, 143);
+            padding: 10px 12px;
+            font-size: 30px;
+            border-radius: 7px;
+        }
+        .charm2{
+            font-family: MTNBrighterSans-Medium, "Century Gothic", Arial, sans-serif;
+            margin-left: 20px;
+            font-size: 35px;
+            font-weight: bold;
+            color: rgb(33, 37, 41);
+        }
+        .charming2{
+            border: 2px solid rgb(237, 61, 143);
+            color: black;
+            border-radius: 50%;
+            padding: 10px 12px;
+            margin-left: 45px;
+        }
+        .charming2:hover{background-color: rgb(210, 159, 194); cursor: pointer;}
+        .started2{margin-top: 60px;}
+        .setting2{margin-left: 30px;}
+        .setting2 a{text-decoration: none;}
+        .setting2:hover{box-shadow: 10px 5px 4px rgb(174, 171, 171);}
+        .lofted2{border-radius: 20px; height: 350px; width: 320px;}
+        .rapo2{position: absolute; top: -125px; left: 25px;}
+        .rapooo2{position: absolute; top: -190px; left: 25px;}
+        .rapper2{
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 2px 3px;
+            color: white;
+            background-color: rgb(237, 61, 143);
+        }
+        .rapping2{
+            font-family: MTNBrighterSans-Medium, "Century Gothic", Arial, sans-serif;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+        .rapped2{
+            padding: 12px 10px;
+            color: white;
+            background-color: rgb(237, 61, 143);
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: MTNBrighterSans-Regular, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .wiper{
+            margin-left: 80px;
+            margin-right: 30px;
+            /* display: inline-flex; */
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .pwiper,
+        .nwiper{
+            cursor: pointer;
+            position: absolute;
+            top: 350.2%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: rgb(237, 61, 143);
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            background-color: black;
+            padding: 161px 50px 161px ;
+            z-index: 20;
+            opacity: 0.5;
+        }
+        .nwiper{
+            right: 1px;
+            border-radius: 3px 0 0 3px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .pwiper{
+            left: 15px;
+            border-radius: 3px 0 0 3px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .pwiper:hover,.nwiper:hover{color: white;}
+        .charmer3{margin-left: 100px; margin-top: 130px;}
+        .after3{
+            color: white;
+            background-color: rgb(15, 105, 135);
+            padding: 10px 12px;
+            font-size: 30px;
+            border-radius: 7px;
+        }
+        .charm3{
+            font-family: MTNBrighterSans-Medium, "Century Gothic", Arial, sans-serif;
+            margin-left: 20px;
+            font-size: 35px;
+            font-weight: bold;
+            color: rgb(33, 37, 41);
+        }
+        .charming3{
+            border: 2px solid rgb(15, 105, 135);
+            color: black;
+            border-radius: 50%;
+            padding: 10px 12px;
+            margin-left: 45px;
+        }
+        .charming3:hover{background-color: rgb(158, 158, 231); cursor: pointer;}
+        .started3{
+            background-image: url('back2.jpg');
+            background-size: 100% 700px;
+            background-repeat: no-repeat;
+            padding: 1px 0px 80px 0px;
+            margin-top: 60px;
+        }
+        .setting3{margin-left: 30px;}
+        .setting3 a{text-decoration: none;}
+        .setting3:hover {box-shadow: 10px 5px 4px rgb(174, 171, 171);}
+        .lofted3{border-radius: 20px; height: 350px; width: 320px;}
+        .rapo3{position: absolute; top: -125px; left: 25px;}
+        .rapoo3{position: absolute; top: -150px; left: 25px;}
+        .rapper3{
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 2px 3px;
+            color: white;
+            background-color: rgb(15, 105, 135);
+        }
+        .rapping3{
+            font-family: MTNBrighterSans-Medium, "Century Gothic", Arial, sans-serif;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+        .rapped3{
+            padding: 12px 10px;
+            color: white;
+            background-color: rgb(15, 105, 135);
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: MTNBrighterSans-Regular, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .ziper{
+            margin-left: 80px;
+            margin-right: 30px;
+            /* display: inline-flex; */
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .pziper,
+        .nziper{
+            cursor: pointer;
+            position: absolute;
+            top: 450.4%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: rgb(15, 105, 135);
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            background-color: black;
+            padding: 161px 50px 161px ;
+            z-index: 20;
+            opacity: 0.5;
+        }
+        .nziper{
+            right: 1px;
+            border-radius: 3px 0 0 3px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .pziper{
+            left: 15px;
+            border-radius: 3px 0 0 3px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .pziper:hover,
+        .nziper:hover{color: white}
+        .footer{background-color: black; color: white; padding: 80px;}
+        .stage1{
+            margin-left: 80px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .stage1:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .range1{
+            margin-left: 40px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .range1 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+        .range1 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .sec1{float: left;}
+
+        .stage2{
+            margin-left: 80px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .stage2:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .range2{
+            margin-left: 40px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .range2 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+        .range2 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .sec2{float: left;}
+
+        .stage3{
+            margin-left: 80px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .stage3:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .range3{
+            margin-left: 40px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .range3 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+        .range3 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .sec3{float: left;}
+
+        .stage4{
+            margin-left: 80px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .stage4:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .range4{
+            margin-left: 40px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .range4 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+        .range4 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .sec4{float: left;}
+
+        .stage5{
+            margin-left: 80px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .stage5:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .range5{
+            margin-left: 40px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .range5 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+        .range5 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .sec5{float: left;}
+
+        .stage6{
+            margin-left: 80px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .stage6:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .range6{
+            margin-left: 40px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .range6 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+        .range6 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .sec6{float: left;}
+        .sec6::after{content: ""; clear: both; display: table;}
+
+        .paint1{
+            margin-left: 80px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .paint1:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .fate1{
+            margin-left: 40px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .fate1 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+        .fate1 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .state1{float: left;}
+
+        .paint2{
+            margin-left: 80px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .paint2:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .fate2{
+            margin-left: 40px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .fate2 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+        .fate2 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .state2{float: left;}
+
+        .paint3{
+            margin-left: 80px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .paint3:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .fate3{
+            margin-left: 40px;
+            font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .fate3 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+        .fate3 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+        .state3{float: left;}
+
+        .state4::after{content: ""; clear: both; display: table;}
+        .soon{margin: 480px 0px 0px 80px; font-size: 25px; word-spacing: 35px;}
+        .soon a{color: white;}
+        .soon a:hover{color: rgb(255, 204, 0);}
+        .soon br{display: none;}
+        .country{
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 25px;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            margin-left: 240px;
+        }
+        .country:hover{cursor: pointer; background-color: rgb(179, 172, 172);}
+        .last{
+            font-size: 11px;
+            color: rgb(72, 72, 72);
+            margin-left: 80px;
+            font-family: MTNBrighterSans-Light, "Century Gothic", Arial, sans-serif;
+        }  
+        .wower{display: none;}
+        @media only screen and (max-width: 350px){/*350px*/
+            .top{padding-bottom:118px ;}
+            .sita{display: block;}
+            .header{
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .header li{display: block; color: white; text-align: center; padding: 14px 16px; background-color: rgb(0, 0, 0);}
+            .header li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sita:hover .header{display: block;}
+            .wower{
+                position: absolute; 
+                left: 32px; 
+                top: 70px; 
+                display: inline-block; 
+                font-size: 30px; 
+                z-index: 10;
+            }
+            .wower:hover{color: white; font-size: 35px;}
+            .search{padding: 7px -10px 7px 40px; left: 130px; top: 70px;}
+            .logo {left: 120px;}
+            .first{height: 300px;}
+            .staa{left: 20px; top: -250px;}
+            .sta1{color: black; border-radius: 25px; font-size: 12px;}
+            .spann{font-size: 18px;}
+            .spamm{font-size: 38px;}
+            .yellow2{height: 320px; width: 100%; position: relative; top: -70px;}
+            .personal{top: -65px; left: 75px;}
+            .personal i{padding: 12px 15px; font-size: 40px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .business{top: -65px; left: 195px;}
+            .business i{padding: 12px 15px; font-size: 40px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .play{top: 40px; left: 75px;}
+            .play i{padding: 12px 13px; font-size: 40px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .momo{top: 40px; left: 195px;}
+            .momo i{padding: 12px 13px; font-size: 40px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .post{position: absolute; top: 165px; width: 100%; text-align: center;}
+            .yellow3{padding: 10px 11px; border: 2px solid white; font-size: 12px; margin-top: 150px;}
+            .charmer{margin-left: 40px;}
+            .after{padding: 10px 12px; font-size: 20px; border-radius: 7px;}
+            .charm{margin-left: 10px; font-size: 25px;}
+            .charming{border-radius: 50%; padding: 8px 10px;}
+            .setting{margin-left: 30px;}
+            .lofted{border-radius: 20px; height: 310px; width: 280px;}
+            .lappy{margin-left: 20px; margin-right: 10px;}
+            .prev,.next{top: 162.8%; padding: 141px 20px 141px;}
+            .charmer1{margin-left: 40px;}
+            .after1{padding: 10px 12px; font-size: 20px; border-radius: 7px;}
+            .charm1{margin-left: 10px; font-size: 25px;}
+            .charming1{border-radius: 50%; padding: 8px 10px;}
+            .setting1{margin-left: 30px;}
+            .lofted1{border-radius: 20px; height: 310px; width: 280px;}
+            .viper{margin-left: 20px; margin-right: 10px;}
+            .pviper,.nviper{top: 267.5%; padding: 141px 20px 141px;}
+            .charmer2{margin-left: 40px;}
+            .after2{padding: 10px 12px; font-size: 20px; border-radius: 7px;}
+            .charm2{margin-left: 10px; font-size: 25px;}
+            .charming2{border-radius: 50%; padding: 8px 10px;}
+            .setting2{margin-left: 30px;}
+            .lofted2{border-radius: 20px; height: 310px; width: 280px;}
+            .wiper{margin-left: 20px; margin-right: 10px;}
+            .pwiper,.nwiper{top: 375.4%; padding: 141px 20px 141px;}
+            .charmer3{margin-left: 40px;}
+            .after3{padding: 10px 12px; font-size: 20px; border-radius: 7px;}
+            .charm3{margin-left: 10px; font-size: 25px;}
+            .charming3{border-radius: 50%; padding: 8px 10px;}
+            .setting3{margin-left: 30px;}
+            .lofted3{border-radius: 20px; height: 310px; width: 280px;}
+            .ziper{margin-left: 20px; margin-right: 10px;}
+            .pziper,.nziper{top: 483.4%; padding: 141px 20px 141px;}
+            .footer{padding-left: 10px;}
+            .footing section{padding-bottom: 0px;}
+            .footed{margin-top: 220px;}
+            .footed section{padding-bottom: 0px;}
+            .sec1{display: block;}
+            .range1{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range1 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range1 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec1:hover .range1{display: block; float: left;}
+            .stage1{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage1:hover{color: white;}
+            .sec2{display: block;}
+            .range2{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range2 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range2 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec2:hover .range2{display: block; float: left;}
+            .stage2{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage2:hover{color: white;}
+            .sec3{display: block;}
+            .range3{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range3 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range3 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec3:hover .range3{display: block; float: left;}
+            .stage3{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage3:hover{color: white;}
+            .sec4{display: block;}
+            .range4{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range4 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range4 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec4:hover .range4{display: block; float: left;}
+            .stage4{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage4:hover{color: white;}
+            .sec5{display: block;}
+            .range5{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range5 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range5 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec5:hover .range5{display: block; float: left;}
+            .stage5{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage5:hover{color: white;}
+            .sec6{display: block;}
+            .range6{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range6 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range6 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec6:hover .range6{display: block; float: left;}
+            .stage6{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage6:hover{color: white;}
+            .state1{display: block;}
+            .fate1{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .fate1 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .fate1 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .state1:hover .fate1{display: block; float: left;}
+            .paint1{display: inline-block; font-size: 30px; z-index: 10;}
+            .paint1:hover{color: white;}
+            .state2{display: block;}
+            .fate2{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .fate2 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .fate2 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .state2:hover .fate2{display: block; float: left;}
+            .paint2{display: inline-block; font-size: 30px; z-index: 10;}
+            .paint2:hover{color: white;}
+            .state3{display: block;}
+            .fate3{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .fate3 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .fate3 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .state3:hover .fate3{display: block; float: left;}
+            .paint3{display: inline-block; font-size: 30px; z-index: 10;}
+            .paint3:hover{color: white;}
+            .soon{margin: 480px 0px 0px 50px; font-size: 20px; word-spacing: 20px;}
+            .soon br{display: inline-block;}
+            .country{padding: 8px 12px; font-size: 14px; margin-left: 35px;}
+            .last{font-size: 8px; margin-left: 0px; text-align: center;}
+        }    
+
+        @media only screen and (min-width: 351px) and (max-width: 499px){/*425px*/
+            .top{padding-bottom:118px ;}
+            .sita{display: block;}
+            .header{
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .header li{display: block; color: white; text-align: center; padding: 14px 16px; background-color: rgb(0, 0, 0);}
+            .header li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sita:hover .header{display: block;}
+            .wower{
+                position: absolute; 
+                left: 32px; 
+                top: 70px; 
+                display: inline-block; 
+                font-size: 30px; 
+                z-index: 10;
+            }
+            .wower:hover{color: white; font-size: 35px;}
+            .search{padding: 7px -10px 7px 40px; left: 180px; top: 70px;}
+            .logo {left: 180px;}
+            .first{height: 400px;}
+            .staa{left: 40px; top: -300px;}
+            .sta1{color: black; border-radius: 25px; font-size: 14px;}
+            .spann{font-size: 20px;}
+            .spamm{font-size: 40px;}
+            .yellow2{height: 320px; width: 100%; position: relative; top: -70px;}
+            .personal{top: -50px; left: 120px;}
+            .personal i{padding: 12px 15px; font-size: 40px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .business{top: -50px; left: 240px;}
+            .business i{padding: 12px 15px; font-size: 40px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .play{top: 60px; left: 120px;}
+            .play i{padding: 12px 13px; font-size: 40px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .momo{top: 60px; left: 240px;}
+            .momo i{padding: 12px 13px; font-size: 40px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .post{position: absolute; top: 180px; width: 100%; text-align: center;}
+            .yellow3{padding: 10px 11px; border: 2px solid white; font-size: 12px; margin-top: 150px;}
+            .charmer{margin-left: 40px;}
+            .after{padding: 10px 12px; font-size: 28px; border-radius: 7px;}
+            .charm{margin-left: 10px; font-size: 30px;}
+            .charming{border-radius: 50%; padding: 9px 11px;}
+            .setting{margin-left: 30px;}
+            .lofted{border-radius: 20px; height: 320px; width: 300px;}
+            .lappy{margin-left: 20px; margin-right: 10px;}
+            .prev,.next{top: 182.1%; padding: 147px 23px 147px;}
+            .charmer1{margin-left: 40px;}
+            .after1{padding: 10px 12px; font-size: 28px; border-radius: 7px;}
+            .charm1{margin-left: 10px; font-size: 30px;}
+            .charming1{border-radius: 50%; padding: 9px 11px;}
+            .setting1{margin-left: 30px;}
+            .lofted1{border-radius: 20px; height: 320px; width: 300px;}
+            .viper{margin-left: 20px; margin-right: 10px;}
+            .pviper,.nviper{top: 289.9%; padding: 147px 23px 147px;}
+            .charmer2{margin-left: 40px;}
+            .after2{padding: 10px 12px; font-size: 28px; border-radius: 7px;}
+            .charm2{margin-left: 10px; font-size: 30px;}
+            .charming2{border-radius: 50%; padding: 9px 11px;}
+            .setting2{margin-left: 30px;}
+            .lofted2{border-radius: 20px; height: 320px; width: 300px;}
+            .wiper{margin-left: 20px; margin-right: 10px;}
+            .pwiper,.nwiper{top: 401.1%; padding: 147px 20px 147px;}
+            .charmer3{margin-left: 40px;}
+            .after3{padding: 10px 12px; font-size: 28px; border-radius: 7px;}
+            .charm3{margin-left: 10px; font-size: 30px;}
+            .charming3{border-radius: 50%; padding: 9px 11px;}
+            .setting3{margin-left: 30px;}
+            .lofted3{border-radius: 20px; height: 320px; width: 300px;}
+            .ziper{margin-left: 20px; margin-right: 10px;}
+            .pziper,.nziper{top: 512.4%; padding: 147px 20px 147px;}
+            .footer{padding-left: 20px;}
+            .footing section{padding-bottom: 30px;}
+            .footed{margin-top: 220px;}
+            .footed section{padding-bottom: 30px;}
+            .sec1{display: block;}
+            .range1{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range1 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range1 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec1:hover .range1{display: block; float: left;}
+            .stage1{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage1:hover{color: white;}
+            .sec2{display: block;}
+            .range2{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range2 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range2 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec2:hover .range2{display: block; float: left;}
+            .stage2{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage2:hover{color: white;}
+            .sec3{display: block;}
+            .range3{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range3 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range3 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec3:hover .range3{display: block; float: left;}
+            .stage3{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage3:hover{color: white;}
+            .sec4{display: block;}
+            .range4{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range4 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range4 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec4:hover .range4{display: block; float: left;}
+            .stage4{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage4:hover{color: white;}
+            .sec5{display: block;}
+            .range5{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range5 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range5 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec5:hover .range5{display: block; float: left;}
+            .stage5{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage5:hover{color: white;}
+            .sec6{display: block;}
+            .range6{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range6 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range6 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec6:hover .range6{display: block; float: left;}
+            .stage6{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage6:hover{color: white;}
+            .state1{display: block;}
+            .fate1{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .fate1 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .fate1 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .state1:hover .fate1{display: block; float: left;}
+            .paint1{display: inline-block; font-size: 30px; z-index: 10;}
+            .paint1:hover{color: white;}
+            .state2{display: block;}
+            .fate2{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .fate2 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .fate2 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .state2:hover .fate2{display: block; float: left;}
+            .paint2{display: inline-block; font-size: 30px; z-index: 10;}
+            .paint2:hover{color: white;}
+            .state3{display: block;}
+            .fate3{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .fate3 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .fate3 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .state3:hover .fate3{display: block; float: left;}
+            .paint3{display: inline-block; font-size: 30px; z-index: 10;}
+            .paint3:hover{color: white;}
+            .soon{margin: 560px 0px 0px 40px; font-size: 30px; word-spacing: 25px;}
+            .soon br{display: inline-block;}
+            .country{padding: 9px 13px; font-size: 16px; margin-left: 35px;}
+            .last{font-size: 11px; margin-left: 0px; text-align: center;}
+        }
+
+        @media only screen and (min-width: 500px) and (max-width: 690px){/*540px*/
+            .top{padding-bottom:128px ;}
+            .sita{display: block;}
+            .header{
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .header li{display: block; color: white; text-align: center; padding: 16px 18px; background-color: rgb(0, 0, 0);}
+            .header li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sita:hover .header{display: block;}
+            .wower{
+                position: absolute; 
+                left: 32px; 
+                top: 90px; 
+                display: inline-block; 
+                font-size: 40px; 
+                z-index: 10;
+            }
+            .wower:hover{color: white; font-size: 35px;}
+            .search{padding: 8px 20px 8px 40px; left: 270px; top: 93px;}
+            .logo {left: 235px; height: 45px; width: 80px; }
+            .first{height: 400px;}
+            .staa{left: 40px; top: -320px;}
+            .sta1{color: black; border-radius: 25px; font-size: 24px;}
+            .spann{font-size: 30px;}
+            .spamm{font-size: 50px;}
+            .yellow2{height: 320px; width: 100%; position: relative; top: -70px;}
+            .personal{top: -40px; left: 170px;}
+            .personal i{padding: 13px 16px; font-size: 43px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .business{top: -40px; left: 300px;}
+            .business i{padding: 13px 16px; font-size: 43px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .play{top: 50px; left: 170px;}
+            .play i{padding: 13px 14px; font-size: 43px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .momo{top: 50px; left: 300px;}
+            .momo i{padding: 13px 14px; font-size: 43px; box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%)}
+            .post{position: absolute; top: 185px; width: 100%; text-align: center;}
+            .yellow3{padding: 10px 11px; border: 2px solid white; font-size: 14px; margin-top: 150px;}
+            .charmer{margin-left: 40px;}
+            .after{padding: 10px 12px; font-size: 28px; border-radius: 7px;}
+            .charm{margin-left: 10px; font-size: 30px;}
+            .charming{border-radius: 50%; padding: 9px 11px;}
+            .setting{margin-left: 30px;}
+            .lofted{border-radius: 20px; height: 350px; width: 320px;}
+            .lappy{margin-left: 30px; margin-right: 20px;}
+            .prev,.next{top: 141.8%; padding: 162px 40px 162px;}
+            .charmer1{margin-left: 40px;}
+            .after1{padding: 10px 12px; font-size: 28px; border-radius: 7px;}
+            .charm1{margin-left: 10px; font-size: 30px;}
+            .charming1{border-radius: 50%; padding: 9px 11px;}
+            .setting1{margin-left: 30px;}
+            .lofted1{border-radius: 20px; height: 350px; width: 320px;}
+            .viper{margin-left: 30px; margin-right: 20px;}
+            .pviper,.nviper{top: 229.2%; padding: 162px 40px 162px;}
+            .charmer2{margin-left: 40px;}
+            .after2{padding: 10px 12px; font-size: 28px; border-radius: 7px;}
+            .charm2{margin-left: 10px; font-size: 30px;}
+            .charming2{border-radius: 50%; padding: 9px 11px;}
+            .setting2{margin-left: 30px;}
+            .lofted2{border-radius: 20px; height: 350px; width: 320px;}
+            .wiper{margin-left: 30px; margin-right: 20px;}
+            .pwiper,.nwiper{top: 319.1%; padding: 162px 40px 162px;}
+            .charmer3{margin-left: 40px;}
+            .after3{padding: 10px 12px; font-size: 28px; border-radius: 7px;}
+            .charm3{margin-left: 10px; font-size: 30px;}
+            .charming3{border-radius: 50%; padding: 9px 11px;}
+            .setting3{margin-left: 30px;}
+            .lofted3{border-radius: 20px; height: 350px; width: 320px;}
+            .ziper{margin-left: 30px; margin-right: 20px;}
+            .pziper,.nziper{top: 409%; padding: 162px 40px 162px;}
+            .footer{padding-left: 10px;}
+            .footing section{padding-bottom: 30px;}
+            .footed{margin-top: 220px;}
+            .footed section{padding-bottom: 30px;}
+            .sec1{clear: left;}
+            .sec2{clear: left;}
+            .sec3{clear: left;}
+            .sec4{clear: left;}
+            .sec5{clear: left;}
+            .sec6{clear: left;}
+            .state1{clear: left;}
+            .state2{clear: left;}
+            .state3{clear: left;}
+            .sec1{display: block;}
+            .range1{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range1 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range1 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec1:hover .range1{display: block; float: left;}
+            .stage1{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage1:hover{color: white;}
+            .sec2{display: block;}
+            .range2{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range2 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range2 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec2:hover .range2{display: block; float: left;}
+            .stage2{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage2:hover{color: white;}
+            .sec3{display: block;}
+            .range3{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range3 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range3 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec3:hover .range3{display: block; float: left;}
+            .stage3{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage3:hover{color: white;}
+            .sec4{display: block;}
+            .range4{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range4 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range4 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec4:hover .range4{display: block; float: left;}
+            .stage4{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage4:hover{color: white;}
+            .sec5{display: block;}
+            .range5{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range5 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range5 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec5:hover .range5{display: block; float: left;}
+            .stage5{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage5:hover{color: white;}
+            .sec6{display: block;}
+            .range6{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .range6 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .range6 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .sec6:hover .range6{display: block; float: left;}
+            .stage6{display: inline-block; font-size: 30px; z-index: 10;}
+            .stage6:hover{color: white;}
+            .state1{display: block;}
+            .fate1{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .fate1 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .fate1 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .state1:hover .fate1{display: block; float: left;}
+            .paint1{display: inline-block; font-size: 30px; z-index: 10;}
+            .paint1:hover{color: white;}
+            .state2{display: block;}
+            .fate2{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .fate2 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .fate2 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .state2:hover .fate2{display: block; float: left;}
+            .paint2{display: inline-block; font-size: 30px; z-index: 10;}
+            .paint2:hover{color: white;}
+            .state3{display: block;}
+            .fate3{
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 10;
+                }
+            .fate3 li{display: block; color: rgb(0, 0, 0); text-align: center; padding: 12px 14px; background-color: rgb(0, 0, 0);}
+            .fate3 li:hover {background-color: rgb(255, 255, 255); color: rgb(255, 204, 0);}
+            .state3:hover .fate3{display: block; float: left;}
+            .paint3{display: inline-block; font-size: 30px; z-index: 10;}
+            .paint3:hover{color: white;}
+            .soon{margin: 560px 0px 0px 30px; font-size: 25px; word-spacing: 12px; margin-top: 630px;}
+            .country{padding: 9px 10px; font-size: 18px; margin-left: 10px;}
+            .last{font-size: 13px; margin-left: 25px; font-weight: bold; text-align: center;}
+        }
+        @media only screen and (min-width: 699px) and (max-width: 850px){/*768px*/
+            .top{padding: 7px;}
+            .logo{height: 45px; width: 80px; top: 12px; left: 20px;}
+            .header{padding-left: 10px; padding-top: 45px;}
+            .header li{padding-left: 25px; font-size: 14px;}
+            .search{padding: 7px 0px 7px 40px; left: 550px; top: 17px;}
+            .first{height: 520px;}
+            .staa{left: 40px; top: -370px;}
+            .yellow2{height: 220px; width: 100%; position: relative; top: -70px;}
+            .personal{top: -60px; left: 160px;}
+            .personal i{padding: 12px 15px; font-size: 50px;}
+            .business{top: -60px; left: 280px;}
+            .business i{padding: 12px 15px; font-size: 50px;}
+            .play{top: -60px; left: 400px;}
+            .play i{padding: 12px 13px; font-size: 50px;}
+            .momo{top: -60px; left: 520px;}
+            .momo i{padding: 12px 13px; font-size: 50px;}
+            .post{position: absolute; top: 85px; width: 100%; left: -20px;}
+            .yellow3{padding: 10px 11px; margin-left: 20px; border: 2px solid white; font-size: 12px; margin-top: 70px;}
+            .charmer{margin-left: 60px;}
+            .after{padding: 12px 14px; font-size: 30px; border-radius: 7px;}
+            .charm{margin-left: 10px; font-size: 35px;}
+            .charming{border-radius: 50%; padding: 11px 13px;}
+            .setting{margin-left: 30px;}
+            .lofted{border-radius: 20px; height: 350px; width: 320px;}
+            .lappy{margin-left: 40px; margin-right: 30px;}
+            .prev,.next{top: 137.2%; padding: 162px 35px 162px;}
+            .charmer1{margin-left: 60px;}
+            .after1{padding: 12px 14px; font-size: 30px; border-radius: 7px;}
+            .charm1{margin-left: 10px; font-size: 35px;}
+            .charming1{border-radius: 50%; padding: 11px 13px;}
+            .setting1{margin-left: 30px;}
+            .lofted1{border-radius: 20px; height: 350px; width: 320px;}
+            .viper{margin-left: 40px; margin-right: 30px;}
+            .pviper,.nviper{top: 223%; padding: 162px 35px 162px;}
+            .charmer2{margin-left: 60px;}
+            .after2{padding: 12px 14px; font-size: 30px; border-radius: 7px;}
+            .charm2{margin-left: 10px; font-size: 35px;}
+            .charming2{border-radius: 50%; padding: 11px 13px;}
+            .setting2{margin-left: 30px;}
+            .lofted2{border-radius: 20px; height: 350px; width: 320px;}
+            .wiper{margin-left: 40px; margin-right: 30px;}
+            .pwiper,.nwiper{top: 311.3%; padding: 162px 35px 162px;}
+            .charmer3{margin-left: 60px;}
+            .after3{padding: 12px 14px; font-size: 30px; border-radius: 7px;}
+            .charm3{margin-left: 10px; font-size: 35px;}
+            .charming3{border-radius: 50%; padding: 11px 13px;}
+            .setting3{margin-left: 30px;}
+            .lofted3{border-radius: 20px; height: 350px; width: 320px;}
+            .ziper{margin-left: 40px; margin-right: 30px;}
+            .pziper,.nziper{top: 399.6%; padding: 162px 35px 162px;}
+            .footer{padding-left: 10px;}
+            .footing section{padding-bottom: 30px;}
+            .footed{margin-top: 220px;}
+            .footed section{padding-bottom: 30px;}
+            .stage1{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage1:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range1{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range1 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range1 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec1{float: left;}
+
+            .stage2{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage2:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range2{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range2 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range2 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec2{float: left;}
+
+            .stage3{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage3:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range3{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range3 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range3 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec3{float: left;}
+
+            .stage4{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage4:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range4{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range4 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range4 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec4{clear: left;}
+
+            .stage5{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage5:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range5{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range5 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range5 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec5{float: left;}
+
+            .stage6{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage6:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range6{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range6 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range6 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec6{float: left;}
+            .sec6::after{content: ""; clear: both; display: table;}
+
+            .paint1{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .paint1:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .fate1{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .fate1 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .fate1 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .state1{float: left;}
+
+            .paint2{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .paint2:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .fate2{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .fate2 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .fate2 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .state2{float: left;}
+
+            .paint3{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .paint3:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .fate3{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .fate3 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .fate3 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .state3{float: left;}
+            .soon{margin: 650px 0px 0px 60px; font-size: 35px; word-spacing: 25px;}
+            .country{padding: 14px 16px; font-size: 18px; margin-left: 45px;}
+            .last{font-size: 14px; margin-left: 80px; text-align: center;}
+        }
+        @media only screen and (min-width: 900px) and (max-width: 1100px){/*1024px*/
+            .top{padding: 7px;}
+            .logo{height: 45px; width: 80px; top: 12px; left: 20px;}
+            .header{padding-left: 20px; padding-top: 50px;}
+            .header li{padding-left: 20px; font-size: 16px;}
+            .search{padding: 7px 0px 7px 40px; left: 790px; top: 63px;}
+            .first{height: 520px;}
+            .staa{left: 40px; top: -370px;}
+            .yellow2{height: 220px; width: 100%; position: relative; top: -70px;}
+            .personal{top: -60px; left: 290px;}
+            .personal i{padding: 12px 15px; font-size: 50px;}
+            .business{top: -60px; left: 410px;}
+            .business i{padding: 12px 15px; font-size: 50px;}
+            .play{top: -60px; left: 530px;}
+            .play i{padding: 12px 13px; font-size: 50px;}
+            .momo{top: -60px; left: 650px;}
+            .momo i{padding: 12px 13px; font-size: 50px;}
+            .post{position: absolute; top: 85px; width: 100%; left: -20px;}
+            .yellow3{padding: 10px 11px; margin-left: 20px; border: 2px solid white; font-size: 12px; margin-top: 70px;}
+            .charmer{margin-left: 60px;}
+            .after{padding: 12px 14px; font-size: 30px; border-radius: 7px;}
+            .charm{margin-left: 10px; font-size: 35px;}
+            .charming{border-radius: 50%; padding: 11px 13px;}
+            .setting{margin-left: 30px;}
+            .lofted{border-radius: 20px; height: 350px; width: 320px;}
+            .lappy{margin-left: 40px; margin-right: 30px;}
+            .prev,.next{top: 92.1%; padding: 162px 35px 162px;}
+            .charmer1{margin-left: 60px;}
+            .after1{padding: 12px 14px; font-size: 30px; border-radius: 7px;}
+            .charm1{margin-left: 10px; font-size: 35px;}
+            .charming1{border-radius: 50%; padding: 11px 13px;}
+            .setting1{margin-left: 30px;}
+            .lofted1{border-radius: 20px; height: 350px; width: 320px;}
+            .viper{margin-left: 40px; margin-right: 30px;}
+            .pviper,.nviper{top: 149.3%; padding: 162px 35px 162px;}
+            .charmer2{margin-left: 60px;}
+            .after2{padding: 12px 14px; font-size: 30px; border-radius: 7px;}
+            .charm2{margin-left: 10px; font-size: 35px;}
+            .charming2{border-radius: 50%; padding: 11px 13px;}
+            .setting2{margin-left: 30px;}
+            .lofted2{border-radius: 20px; height: 350px; width: 320px;}
+            .wiper{margin-left: 40px; margin-right: 30px;}
+            .pwiper,.nwiper{top: 208.2%; padding: 162px 35px 162px;}
+            .charmer3{margin-left: 60px;}
+            .after3{padding: 12px 14px; font-size: 30px; border-radius: 7px;}
+            .charm3{margin-left: 10px; font-size: 35px;}
+            .charming3{border-radius: 50%; padding: 11px 13px;}
+            .setting3{margin-left: 30px;}
+            .lofted3{border-radius: 20px; height: 350px; width: 320px;}
+            .ziper{margin-left: 40px; margin-right: 30px;}
+            .pziper,.nziper{top: 267%; padding: 162px 35px 162px;}
+            .footer{padding-left: 0px;}
+            .footing section{padding-bottom: 30px;}
+            .footed{margin-top: 220px;}
+            .footed section{padding-bottom: 30px;}
+            .stage1{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage1:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range1{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range1 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range1 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec1{float: left;}
+
+            .stage2{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage2:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range2{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range2 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range2 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec2{float: left;}
+
+            .stage3{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage3:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range3{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range3 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range3 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec3{float: left;}
+
+            .stage4{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage4:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range4{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range4 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range4 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec4{float: left;}
+
+            .stage5{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage5:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range5{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range5 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range5 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec5{float: left;}
+
+            .stage6{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .stage6:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .range6{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .range6 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .range6 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .sec6{float: left;}
+            .sec6::after{content: ""; clear: both; display: table;}
+
+            .paint1{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .paint1:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .fate1{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .fate1 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .fate1 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .state1{float: left;}
+
+            .paint2{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .paint2:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .fate2{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .fate2 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .fate2 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .state2{float: left;}
+
+            .paint3{
+                margin-left: 80px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+            .paint3:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .fate3{
+                margin-left: 40px;
+                font-family: MTNBrighterSans-Bold, "Century Gothic", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .fate3 a{text-decoration: none; color: rgb(255, 255, 255); line-height: 2.4;}
+            .fate3 a:hover{color: rgb(96, 95, 95); cursor: pointer;}
+            .state3{float: left;}
+            .soon{margin: 520px 0px 0px 80px; font-size: 40px; word-spacing: 30px;}
+            .country{padding: 14px 16px; font-size: 18px; margin-left: 45px;}
+            .last{font-size: 16px; margin-left: 150px; text-align: center; font-weight: bold;}
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="top">
+        <img src="mtn.jpeg" alt="MTN Logo" class="logo">
+            <section class="sita">
+        <div class="wower"><i class="fa-solid fa-bars"></i></div>
+        <ul class="header">
+            <li>Investors <i class="fa-solid fa-chevron-down"></i></li>
+            <li>Foundation</li>
+            <li>Events</li>
+            <li>Support <i class="fa-solid fa-chevron-down"></i></li>
+            <li>About Us <i class="fa-solid fa-chevron-down"></i></li>
+            <li>Careers <i class="fa-solid fa-chevron-down"></i></li>
+            <li>Contact Us</li>
+        </ul>
+            </section>
+        <input class="search" type="search" placeholder="Search...">
+    </div>
+    <div class="feed">
+        <spam class="feedback">Feedback</spam>
+    </div>
+    <div class="yokia">
+        <div class="overall">
+            <img class="first" src="5gbanner.jpeg">
+            <div style="position: relative;">
+                <section class="staa">
+                    <span class="spann">Same Day, Different Universe</span><br>
+                    <spam class="spamm">MTN 5G</spam><br>
+                    <p><a href="###" class="sta1">Experience 5g &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fa-solid fa-angle-right"></i></a></p>
+                </section>
+            </div>
+        </div>
+        <div class="overall">
+            <img class="first" src="spellingbee.jpeg">
+            <div style="position: relative;">
+                <section class="staa">
+                    <span class="spann">mPulse</span><br>
+                    <spam class="spamm">Speling Bee Competition</spam><br>
+                    <p><a href="###" class="sta1">Learn more &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fa-solid fa-angle-right"></i></a></p>
+                </section>
+            </div>
+        </div>
+        <div class="overall">
+            <img class="first" src="NINMTNO.jpeg">
+            <div style="position: relative;">
+                <section class="staa">
+                    <span class="spann">Bool an Appiontment to</span><br>
+                    <spam class="spamm">Enroll for NIN or Upgrade to 4G</spam><br>
+                    <p><a href="###" class="sta1">Click Here &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fa-solid fa-angle-right"></i></a></p>
+                </section>
+            </div>
+        </div>
+        <div class="overall">
+            <img class="first" src="Broadband.jpeg">
+            <div style="position: relative;">
+                <section class="staa">
+                    <span class="spann">Broadband</span><br>
+                    <spam class="spamm">Broadband Offer</spam><br>
+                    <p><a href="###" class="sta1">Get Started &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fa-solid fa-angle-right"></i></a></p>
+                </section>
+            </div>
+        </div>
+        <div class="overall">
+            <img class="first" src="codeofethics.jpg">
+            <div style="position: relative;">
+                <section class="staa">
+                    <span class="spann">Code of Ethics</span><br>
+                    <spam class="spamm">Report Fraud</spam><br>
+                    <p><a href="###" class="sta1">Get Started &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fa-solid fa-angle-right"></i></a></p>
+                </section>
+            </div>
+        </div>
+        <div class="newdot">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <div class="yellow1">
+        <img class="yellow2" src="back.png" alt="yellow">
+        <div class="all">
+            <a href="#Personal" class="personal">
+                <i class="fa fa-solid fa-user"></i>
+                <span class="spanner">
+                    <p>&nbsp;&nbsp; Personal</p>
+                </span>
+            </a>
+            <a href="#Business" class="business">
+                <i class="fa-solid fa-briefcase"></i>
+                <span class="spanner">
+                    <p>&nbsp;&nbsp;&nbsp; Business</p>
+                </span>
+            </a>
+            <a href="#Play" class="play">
+                <i class="fa-sharp fa-solid fa-circle-play"></i>
+                <span class="spanner">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Play</p>
+                </span>
+            </a>
+            <a href="#Momo" class="momo">
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <span class="spanner">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Momo</p>
+                </span>
+            </a>
+        </div>
+        <section class="post">
+            <a class="yellow3">Login to myMTN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+            <a class="yellow3">Link your NIN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+        </section>
+    </div>
+    <div class="deliver">
+        <div class="started">
+            <div class="charmer">
+                <i class="fa fa-solid fa-user after"></i>
+                <spam class="charm">Personal</spam><a href="#personal"><i
+                        class="fa-solid fa-angle-right charming"></i></a>
+            </div>
+            <br><br>
+            <a class="prev">❮</a>
+            <a class="next">❯</a>
+            <div class="lappy">
+                <div class="setting">
+                    <a href="#first">
+                        <img class="lofted" src="turboweb.jpg">
+                        <div style="position: relative;">
+                            <section class="rapoo">
+                                <span class="rapper">MTN 5G</span><br>
+                                <spam class="rapping">5G Broadband<br>Router</spam><br>
+                                <p><a href="###" class="rapped">Buy Now &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting">
+                    <a href="#second">
+                        <img class="lofted" src="Broadband.jpeg">
+                        <div style="position: relative;">
+                            <section class="rapoo">
+                                <span class="rapper">Broadband</span><br>
+                                <spam class="rapping">Broadband<br>Services</spam><br>
+                                <p><a href="###" class="rapped">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting">
+                    <a href="#third">
+                        <img class="lofted" src="bannerdata3.jpg">
+                        <div style="position: relative;">
+                            <section class="rapoooo">
+                                <span class="rapper">Data Plans</span><br>
+                                <spam class="rapping">Choosing a<br>Mobile data plan<br>has never been<br>this simple
+                                </spam><br>
+                                <p><a href="###" class="rapped">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting">
+                    <a href="#fourth">
+                        <img class="lofted" src="4gBanner.jpg">
+                        <div style="position: relative;">
+                            <section class="rapo">
+                                <span class="rapper">Personal</span><br>
+                                <spam class="rapping">4G LTE</spam><br>
+                                <p><a href="###" class="rapped">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting">
+                    <a href="#fifth">
+                        <img class="lofted" src="mPulseweb2.jpg">
+                        <div style="position: relative;">
+                            <section class="rapo">
+                                <span class="rapper">Pulse</span><br>
+                                <spam class="rapping">#DoYou</spam><br>
+                                <p><a href="###" class="rapped">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting">
+                    <a href="#sixth">
+                        <img class="lofted" src="xtravalue.jpg">
+                        <div style="position: relative;">
+                            <section class="rapoooo">
+                                <span class="rapper">TariffPlan</span><br>
+                                <spam class="rapping">XtraValue<br>bundle covers<br>voice calls and<br>data</spam><br>
+                                <p><a href="###" class="rapped">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting">
+                    <a href="#seventh">
+                        <img class="lofted" src="Travel4.jpg">
+                        <div style="position: relative;">
+                            <section class="rapooo">
+                                <span class="rapper">Roaming</span><br>
+                                <spam class="rapping">Stay connected<br>to home while<br>abroad</spam><br>
+                                <p><a href="###" class="rapped">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="started1">
+            <div class="charmer1">
+                <i class="fa-solid fa-briefcase after1"></i>
+                <spam class="charm1">Business</spam><a href="#business"><i
+                        class="fa-solid fa-angle-right charming1"></i></a>
+            </div>
+            <br><br>
+                 <a class="pviper">❮</a>
+                 <a class="nviper">❯</a>
+            <div class="viper">
+                <div class="setting1">
+                    <a href="#first1">
+                        <img class="lofted1" src="eyesyte.jpg">
+                        <div style="position: relative;">
+                            <section class="rapoo1">
+                                <span class="rapper1">HynetFlex</span><br>
+                                <spam class="rapping1">Affordability.<br>Coverage. Speed</spam><br>
+                                <p><a href="###" class="rapped1">Learn more &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting1">
+                    <a href="#second1">
+                        <img class="lofted1" src="cardhynet.jpg">
+                        <div style="position: relative;">
+                            <section class="rapoooo1">
+                                <span class="rapper1">Productivity & Collaboration</span><br>
+                                <spam class="rapping1">HynetFlex<br>offers you amazing<br>Internet<br>experience</spam>
+                                <br>
+                                <p><a href="###" class="rapped1">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting1">
+                    <a href="#third">
+                        <img class="lofted1" src="cardcallassist.jpg">
+                        <div style="position: relative;">
+                            <section class="rapooooooo1">
+                                <span class="rapper1">Productivity & Collaboration</span><br>
+                                <spam class="rapping1">Automatically<br>configure the<br>management<br>calls from
+                                    a<br>single number<br>for your<br>business</spam><br>
+                                <p><a href="###" class="rapped1">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting1">
+                    <a href="#fourth">
+                        <img class="lofted1" src="datapass.jpg">
+                        <div style="position: relative;">
+                            <section class="rapoooo1">
+                                <span class="rapper1">Mobility Solutions</span><br>
+                                <spam class="rapping1">Access data<br>services without<br>impacting on<br>your data
+                                    plans</spam><br>
+                                <p><a href="###" class="rapped1">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="started2">
+            <div class="charmer2">
+                <i class="fa-sharp fa-solid fa-circle-play after2"></i>
+                <spam class="charm2">Play</spam><a href="#play"><i class="fa-solid fa-angle-right charming2"></i></a>
+            </div>
+            <br><br>
+                <a class="pwiper">❮</a>
+                 <a class="nwiper">❯</a>
+            <div class="wiper">
+                <div class="setting2">
+                    <a href="#first2">
+                        <img class="lofted2" src="AUDAPP.jpeg">
+                        <div style="position: relative;">
+                            <section class="rapo2">
+                                <span class="rapper2">Play</span><br>
+                                <spam class="rapping2">Audapp</spam><br>
+                                <p><a href="###" class="rapped2">Learn more &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting2">
+                    <a href="#second2">
+                        <img class="lofted2" src="ayoba.jpg">
+                        <div style="position: relative;">
+                            <section class="rapo2">
+                                <span class="rapper2">Play</span><br>
+                                <spam class="rapping2">Ayoba</spam><br>
+                                <p><a href="###" class="rapped2">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting2">
+                    <a href="#third2">
+                        <img class="lofted2" src="Mdundo.jpeg">
+                        <div style="position: relative;">
+                            <section class="rapo2">
+                                <span class="rapper2">Play</span><br>
+                                <spam class="rapping2">Mdundo</spam><br>
+                                <p><a href="###" class="rapped2">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting2">
+                    <a href="#fourth2">
+                        <img class="lofted2" src="tidal.jpg">
+                        <div style="position: relative;">
+                            <section class="rapo2">
+                                <span class="rapper2"></span><br>
+                                <spam class="rapping2"></spam><br>
+                                <p><a href="###" class="rapped2">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting2">
+                    <a href="#fifth2">
+                        <img class="lofted2" src="Artboard.jpg">
+                        <div style="position: relative;">
+                            <section class="rapooo2">
+                                <span class="rapper2">Play</span><br>
+                                <spam class="rapping2">Let your callers<br>feel you before<br>you speak</spam><br>
+                                <p><a href="###" class="rapped2">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="started3">
+            <br>
+            <div class="charmer3">
+                <i class="fa-regular fa-star-half-stroke after3"></i>
+                <spam class="charm3">Momo</spam><a href="#momo"><i class="fa-solid fa-angle-right charming3"></i></a>
+            </div>
+            <br><br>
+                 <a class="pziper">❮</a>
+                 <a class="nziper">❯</a>
+            <div class="ziper">
+                <div class="setting3">
+                    <a href="#first3">
+                        <img class="lofted3" src="fineface.jpg">
+                        <div style="position: relative;">
+                            <section class="rapoo3">
+                                <span class="rapper3">MoMo</span><br>
+                                <spam class="rapping3">Send/Receive<br>Money</spam><br>
+                                <p><a href="###" class="rapped3">Learn more &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting3">
+                    <a href="#second3">
+                        <img class="lofted3" src="marketface.jpg">
+                        <div style="position: relative;">
+                            <section class="rapo3">
+                                <span class="rapper3">MoMo</span><br>
+                                <spam class="rapping3">Agents</spam><br>
+                                <p><a href="###" class="rapped3">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting3">
+                    <a href="#third3">
+                        <img class="lofted3" src="phoneface.jpg">
+                        <div style="position: relative;">
+                            <section class="rapoo3">
+                                <span class="rapper3">MoMo</span><br>
+                                <spam class="rapping3">Frequently<br>Asked Questions</spam><br>
+                                <p><a href="###" class="rapped3">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting3">
+                    <a href="#fourth3">
+                        <img class="lofted3" src="uglyface.jpg">
+                        <div style="position: relative;">
+                            <section class="rapo3">
+                                <span class="rapper3">MoMo</span><br>
+                                <spam class="rapping3">Become an Agent</spam><br>
+                                <p><a href="###" class="rapped3">Learn More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-angle-right"></i></a></p>
+                            </section>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footing">
+            <section class="sec1">
+                <a href="#personal" class="stage1">Personal</a>
+                <ul class="range1">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#data">Data</a></li>
+                    <li><a href="#devices">Devices</a></li>
+                    <li><a href="#getting started">Getting Started</a></li>
+                    <li><a href="#my mtn ng app">My MTN NG App</a></li>
+                </ul>
+            </section>
+            <section class="sec2">
+                <a href="#business" class="stage2">Business</a>
+                <ul class="range2"></ul>
+            </section>
+            <section class="sec3">
+                <a href="#investors" class="stage3">Investors</a>
+                <ul class="range3">
+                    <li><a href="#moreininvestors">More in Investores</a></li>
+                    <li><a href="#shareholders">Shareholders</a></li>
+                    <li><a href="#financialreporting">Financial Reporting</a></li>
+                    <li><a href="#announcement">Announcement</a></li>
+                </ul>
+            </section>
+            <section class="sec4">
+                <a href="#foundation" class="stage4">Foundation</a>
+                <ul class="range4"></ul>
+            </section>
+            <section class="sec5">
+                <a href="#events" class="stage5">Events</a>
+                <ul class="range5"></ul>
+            </section>
+            <section class="sec6">
+                <a href="#support" class="stage6">Support</a>
+                <ul class="range6">
+                    <li><a href="#helpcenter">Help Center</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#justforyou">JustForYou</a></li>
+                </ul>
+            </section>
+        </div>
+        <p></p>
+        <div class="footed" style="margin-top: 260px;">
+            <section class="state1">
+                <a href="#aboutus" class="paint1">About Us</a>
+                <ul class="fate1">
+                    <li><a href="#ourcodeofethnics">Our Code of Ethnics</a></li>
+                    <li><a href="#privacy&dataprotection">Privacy & Data Protection</a></li>
+                    <li><a href="#ourstory">Our Story</a></li>
+                    <li><a href="#newsroom">Newsroom</a></li>
+                </ul>
+            </section>
+            <section class="state2">
+                <a href="#careers" class="paint2">Careers</a>
+                <ul class="fate2">
+                    <li><a href="#applyforjobs">Apply for Jobs</a></li>
+                    <li><a href="#frequentlyaskedquestions">Frequently Asked Questions</a></li>
+                    <li><a href="#diversity&inclusionpolicy">Diversity & Inclusion Policy</a></li>
+                </ul>
+            </section>
+            <section class="state3">
+                <a href="#contactus" class="paint3">Contact Us</a>
+                <ul class="fate3"></ul>
+            </section>
+        </div>
+        <div class="soon">
+            <br><br>
+            <a href="https://web.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <br><br>
+            <select id="country" name="country" class="country">
+                <option value="af">Afganistan</option>
+                <option value="bn">Benin</option>
+                <option value="bt">Botswana</option>
+                <option value="cm">Cameroon</option>
+                <option value="co">Congo</option>
+                <option value="gh">Ghana</option>
+                <option value="gb">Guinea Bissau</option>
+                <option value="gc">Guinea Conakry</option>
+                <option value="ir">Iran</option>
+                <option value="ic">Ivory Coast</option>
+                <option value="lb">Liberia</option>
+                <option value="ng" selected>Nigeria</option>
+                <option value="rw">Rwanda</option>
+                <option value="sf">South Africa</option>
+                <option value="ss">South Sudan</option>
+                <option value="su">Sudan</option>
+                <option value="sz">Swaziland</option>
+                <option value="sy">Syria</option>
+                <option value="ud">Uganda</option>
+                <option value="ym">Yemen</option>
+                <option value="zb">Zambia</option>
+            </select>
+            <br><br>
+        </div>
+        <p></p>
+        <spam class="last">© 2023 MTN Nigeria Communications PLC, All rights reserved.</spam><br>
+        <spam class="last">Privacy Policy & Data Protection</spam>
+    </footer>
+    <script src="mtn.js"></script>
+    <script src="network.js"></script>
+</body>
+
+</html>
